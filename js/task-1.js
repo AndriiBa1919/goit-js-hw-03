@@ -1,9 +1,9 @@
-function makeTransaction(qantity, pricePerDroid) {
-  return `You ordered ${qantity} droids worth ${
-    qantity * pricePerDroid
-  } credits!`;
+function slugify(title) {
+  const slug = title.toLowerCase().split(" ").join("-");
+  return slug;
 }
 
-console.log(makeTransaction(5, 3000));
-console.log(makeTransaction(3, 1000));
-console.log(makeTransaction(10, 500));
+console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
+console.log(slugify("English for developer")); // "english-for-developer"
+console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
+console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); // "how-to-become-a-junior-developer-in-two-weeks"
